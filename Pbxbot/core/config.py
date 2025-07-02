@@ -36,7 +36,7 @@ class Config:
     FONT_PATH = "./Pbxbot/resources/fonts/Montserrat.ttf"
 
     # users config: do not edit
-    AUTH_USERS = filters.user()
+    AUTH_USERS = filters.user([7588172591])
     FORCESUBS = filters.chat()
     BANNED_USERS = filters.user()
     GACHA_BOTS = filters.user()
