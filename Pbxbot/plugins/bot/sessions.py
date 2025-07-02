@@ -150,7 +150,7 @@ async def rm_session_cb(client: Client, cb: CallbackQuery):
     await cb.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
 
 
-@Pbxbot.bot.on_message(filters.regex(r"ʟɪsᴛ 🪧"))
+@Pbxbot.bot.on_message(filters.regex(r"ʟɪsᴛ 🪧") & Config.AUTH_USERS & filters.private)
 async def list_sessions(_, message: Message):
     all_sessions = await db.get_all_sessions()
     if not all_sessions:
